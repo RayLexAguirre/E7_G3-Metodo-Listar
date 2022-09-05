@@ -1,0 +1,45 @@
+<style>
+  body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  }
+  </style>
+  
+  <div id='conatiner'>
+    <div id='app'>
+      <form>
+          <label for='txtDato'>
+          Dato:<input type='text' id='txtDato'>
+        </label><br>
+        <button type='button' id='btnAdd'>Add</button>
+      </form>  
+    </div>
+  </div>
+  <div id='detalles'>
+   
+  </div>
+  <script>
+  class Persona{
+    constructor(codigo,nombre){
+        this.nombre=nombre;
+        this.codigo=codigo;
+        this.siguiente=null;
+    }
+  }
+  
+  class Grupo{
+    constructor(){
+        this.inicio=null;
+    }
+    agregar(nuevo){
+        if (this.inicio==null){
+            this.inicio=nuevo;
+        } else {
+            let temp=this.inicio;
+            while (temp.siguiente!=null){
+                temp=temp.siguiente;
+            }
+            temp.siguiente=nuevo;
+        }
+    }
+  }
+  </script>
